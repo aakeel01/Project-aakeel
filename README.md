@@ -8,3 +8,7 @@ The Aim is to create a system that allows for managing student information and c
 Project: Student Database Management System(PostgreSQL)
 ### Added outputfiled with project title and question no and subquestion id.
 
+## Task 3
+Project: Event Management System using PostgreSQL
+### Added outputfiled with project title and question no and subquestion id.
+
