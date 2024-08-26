@@ -35,12 +35,15 @@ insert into events values
 ('4','Skits','2000-02-04','USA','Traditional Skits'),
 ('5','Singing','2000-02-05','Canada','Bollywood songs')
 
+
+
 insert into Attendees values
 ('101','Akeel','111222','abc@gmail.com','Delhi'),
 ('102','Arshiya','333444','efg@gmail.com','Agra'),
 ('103','Soumya','555666','hij@gmail.com','Kerala'),
 ('104','Sharuk','777888','klm@gmail.com','Noida'),
 ('105','Chithra','999000','nop@gmail.com','Goa')
+
 
 insert into Registrations values
 ('201','1','101','2000-07-01','900'),
@@ -50,6 +53,7 @@ insert into Registrations values
 ('205','5','105','2000-07-05','500'),
 ('206','1','102','2000-07-06','800'),
 ('207','2','101','2000-07-07','900')
+
 
 /*3. Manage Event Details
 a) Inserting a new event.*/
@@ -63,21 +67,33 @@ update events
 set Event_Name = 'Clay modelling' ,Event_Description = 'beginners'
 where Event_Id = '2';
 
+select *
+from events;
+
 /*c) Deleting an events*/
 delete 
 from events
 where Event_Name = 'Karate';
+
+select *
+from events
 
 /*4) Manage Track Attendees & Handle Events
 a)Inserting a new attendee.*/
 
 insert into Attendees values
 ('106','Gautham','888000','qrs@gmail.com','Karwar')
+select *
+from Attendees
 
 /*b)Registering an attendee for an event.*/
 
 insert into Registrations values
 ('208','3','106','2000-02-03','700')
+
+select *
+from Registrations
+
 
 /*5.Develop queries to retrieve event information, generate attendee lists, and calculate event
 attendance statistics.*/
@@ -88,6 +104,3 @@ on e.Event_Id = r.Event_Id
 join Attendees a
 on r.Attendee_id = a.Attendee_id
 group by e.Event_Id, e.Event_Name, e.Event_Date , e.Event_Location, e.Event_Description , a.Attendee_Id,a.Attendee_Name;
-
-
-
